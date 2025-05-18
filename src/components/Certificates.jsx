@@ -6,7 +6,7 @@ const certificatesData = [
     title: 'NCII TESDA PASSER',
     issued: 'June 13, 2023',
     by: 'Technical Education and Skills Development Authority (TESDA)',
-    imageUrl: '/Images/Certificates.png', // Path to your certificate image
+    imageUrl: '/Images/Certificates.png', // Correct path for public/Images/Certificates.png
     imageHint: 'TESDA NCII certificate',
     viewUrl: '#' // You can update this link if you have a URL for the certificate
   }

@@ -5,11 +5,11 @@ const projectsData = [
     id: 1,
     title: 'Project 1',
     description: 'This Project is for Admin Management.',
-    imageUrl: '/Images/Project1.png', // Assumes Project1.png is in public/Images/
+    imageUrl: '/Images/Project1.png', // Correct path for public/Images/Project1.png
     imageHint: 'admin dashboard',
     liveDemoUrl: 'https://tvskingstargoldadmin.pages.dev/login',
   },
-  // Project 2 is now a placeholder
+  // Project 2 is a placeholder
 ];
 
 const Projects = React.forwardRef((props, ref) => (

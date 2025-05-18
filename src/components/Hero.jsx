@@ -61,7 +61,6 @@ const Hero = () => {
     pauseEndSpeed, 
     pauseStartSpeed, 
     isInitialDelayOver,
-    // setAnimatedName, setCharIndex, setIsDeleting are stable, not strictly needed but good for completeness if linted
   ]);
 
   return (
