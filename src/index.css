@@ -39,11 +39,6 @@ body.dark-mode header {
     background-color: #1e1e1e;
 }
 
-/* body.dark-mode .container { */
-    /* This rule might be too broad or conflict, let's be more specific or handle component-wise */
-    /* background-color: #1e1e1e; */
-/* } */
-
 body.dark-mode .btn {
     background-color: #333333;
     color: #ffffff;
@@ -62,7 +57,7 @@ body.dark-mode .nav-links a.active::after {
 }
 
 body.dark-mode .hero {
-    background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+    background: #1a1a1a; /* Updated */
 }
 
 body.dark-mode .hero-content h1,
@@ -81,8 +76,7 @@ body.dark-mode .social-icons a:hover {
 }
 
 body.dark-mode .project-card {
-    background: #1e1e1e;
-    /* color: #ffffff; */ /* Handled by text color on body.dark-mode */
+    background: #070F2B; 
 }
 
 body.dark-mode .project-card .project-info h3,
@@ -91,7 +85,7 @@ body.dark-mode .project-card .project-info p {
 }
 
 body.dark-mode .project-card.empty {
-    background-color: #333333;
+    background-color: #1f1f1f; /* Darker grey for empty cards */
     border-color: #444444;
 }
 
@@ -101,7 +95,7 @@ body.dark-mode .project-card.empty p {
 }
 
 body.dark-mode .contact {
-    background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+    background: #373737; /* Updated */
 }
 
 body.dark-mode .contact-info h3,
@@ -111,13 +105,12 @@ body.dark-mode .contact-links a {
 }
 
 body.dark-mode .contact-form {
-    background: #1e1e1e;
-    /* color: #ffffff; */
+    background: #070F2B; 
 }
 
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
-    background: #333333;
+    background: #121212;
     color: #ffffff;
     border-color: #444444;
 }
@@ -128,21 +121,20 @@ body.dark-mode .contact-form textarea:focus {
 }
 
 body.dark-mode footer {
-    background: #1e1e1e;
+    background: #1a1a1a; /* Updated */
     color: #ffffff;
 }
 
 body.dark-mode .certificates {
-    background-color: #1e1e1e;
+    background: #393939; /* Updated */
 }
 
 body.dark-mode .certificate-card {
-    background: #333333;
-    /* color: #ffffff; */
+    background: #070F2B; 
 }
 
 body.dark-mode .certificate-card.empty {
-    background-color: #444444;
+    background-color: #2e2e2e; /* Darker grey for empty cards */
     border-color: #555555;
 }
 
@@ -152,108 +144,87 @@ body.dark-mode .certificate-card.empty p {
 }
 
 body.dark-mode .timeline-content {
-    background: #333333;
-    /* color: #ffffff; */
+    /* General timeline content, specific overrides below */
+    background: #2c2c2c; 
 }
 
 body.dark-mode .timeline-date {
-    background: #444444;
+    background: #1f1f1f;
     color: #ffffff;
 }
 
 body.dark-mode .education {
-    background-color: #1e1e1e;
+    background: #464646; /* Updated */
 }
 
 body.dark-mode .education h2 {
     color: #ffffff;
 }
 
-/* body.dark-mode .timeline { */
-    /* background-color: #1e1e1e; */ /* Timeline itself doesn't need background, its items do */
-/* } */
-
 body.dark-mode .timeline::before {
     background-color: #ffffff;
 }
 
-body.dark-mode .timeline-item .timeline-content { /* More specific */
-    background-color: #333333;
-    color: #ffffff; /* Ensure text color is white */
+body.dark-mode .education .timeline-item .timeline-content {
+    background-color: #3b3b3b; /* Adjusted for new education bg */
+    color: #ffffff;
 }
 
 
-body.dark-mode .timeline-item .timeline-date { /* More specific */
-    background-color: #444444;
+body.dark-mode .timeline-item .timeline-date {
+    background-color: #444444; 
     color: #ffffff;
 }
 
 body.dark-mode .timeline-item::after {
-    background-color: #1e1e1e; /* Dot background */
-    border-color: #ffffff; /* Dot border */
+    background-color: #1e1e1e; 
+    border-color: #ffffff;
 }
 
 
-/* Dark mode styles for Work Experience section */
 body.dark-mode .experience {
-    background-color: #1e1e1e;
+    background: #303030; /* Updated */
 }
 
 body.dark-mode .experience h2 {
     color: #ffffff;
 }
 
-/* body.dark-mode .experience .timeline {
-    background-color: #1e1e1e;
-} */
-
 body.dark-mode .experience .timeline::before {
     background-color: #ffffff;
 }
 
-/* body.dark-mode .experience .timeline-item {
-    background-color: #333333;
-    color: #ffffff;
-} */
-
 body.dark-mode .experience .timeline-item .timeline-content {
-    background-color: #333333;
+    background-color: #1B1A55; /* Existing dark contrast */
     color: #ffffff;
 }
 
 body.dark-mode .experience .timeline-item .timeline-date {
-    background-color: #444444;
+    background-color: #444444; 
     color: #ffffff;
 }
 
 body.dark-mode .experience .timeline-item::after {
-    background-color: #1e1e1e;
+    background-color: #1e1e1e; 
     border-color: #ffffff;
 }
 
-/* Dark mode styles for My Projects section */
 body.dark-mode .projects {
-    background-color: #1e1e1e;
+    background: #252525; /* Updated */
 }
 
 body.dark-mode .projects h2 {
     color: #ffffff;
 }
 
-body.dark-mode .projects .project-card {
-    background-color: #333333;
-    /* color: #ffffff; */
-}
+/* body.dark-mode .projects .project-card is already #070F2B */
 
 body.dark-mode .projects .project-card .project-info h3,
 body.dark-mode .projects .project-card .project-info p {
     color: #ffffff;
 }
 
-body.dark-mode .projects .project-card.empty {
-    background-color: #444444;
-    border-color: #555555;
-}
+/* body.dark-mode .projects .project-card.empty is already #1f1f1f */
 
 body.dark-mode .projects .project-card.empty h3,
 body.dark-mode .projects .project-card.empty p {
@@ -329,9 +300,8 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Header Styles */
 header {
-    background-color: var(--white);
+    /* background-color: var(--white); */ /* Not needed in permanent dark mode */
     box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
@@ -340,21 +310,20 @@ header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Scroll Progress Bar */
 .scroll-progress-bar-container {
     width: 100%;
-    height: 5px; /* Adjust height as needed */
-    position: fixed; /* Changed from relative to fixed to be at the very top */
-    top: 0;
-    left: 0;
-    z-index: 1001; /* Higher than header content but below modals if any */
+    height: 5px;
+    /* position: fixed; */ /* Removed as header is fixed */
+    /* top: 0; */
+    /* left: 0; */
+    /* z-index: 1001; */ /* Not needed if part of header */
 }
 
 .scroll-progress-bar {
     height: 100%;
-    background: linear-gradient(to right, #6c63ff, #45aaf2); /* Purple to Blue gradient */
-    width: 0%; /* Initial width */
-    transition: width 0.1s ease-out; /* Smooth transition for width change */
+    background: linear-gradient(to right, #6c63ff, #45aaf2);
+    width: 0%;
+    transition: width 0.1s ease-out;
 }
 
 
@@ -362,8 +331,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0; /* Matches original CSS */
-    height: 80px; /* Ensure consistent height, can be adjusted */
+    padding: 20px 0;
+    height: 80px; /* Ensure header has fixed height */
 }
 
 
@@ -376,7 +345,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    align-items: center; /* Vertically align items if needed */
+    align-items: center;
 }
 
 .nav-links li {
@@ -384,7 +353,7 @@ nav {
 }
 
 .nav-links a {
-    color: var(--text-color); /* Will be overridden by dark-mode specific if active */
+    /* color: var(--text-color); */ /* Base color handled by dark mode */
     font-weight: 600;
     position: relative;
     padding: 5px 0;
@@ -405,23 +374,21 @@ nav {
     width: 100%;
 }
 
-
-/* Burger menu specific styles, adapted from original */
 .burger {
-    display: none; /* Hidden by default, shown in media query */
+    display: none;
     cursor: pointer;
 }
 
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: var(--text-color); /* Adapts to dark mode via body color */
+    /* background-color: var(--text-color); */ /* Base color handled by dark mode */
     margin: 5px;
     transition: all 0.3s ease;
 }
 
 body.dark-mode .burger div {
-    background-color: #ffffff; /* Explicit for dark mode */
+    background-color: #ffffff;
 }
 
 
@@ -437,25 +404,21 @@ body.dark-mode .burger div {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
-/* Hero Section */
 .hero {
-    padding-top: 100px; /* Adjust top padding: header (80px) + progress bar (5px) + some breathing room */
+    padding-top: 100px; /* Account for fixed header + progress bar */
     padding-bottom: 80px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-    min-height: 100vh; /* Make hero take full viewport height */
-    display: flex; /* For centering content */
-    align-items: center; /* For centering content */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.hero .container { /* Added from original structure for consistency with other sections */
+.hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%; /* Ensure container takes up appropriate width */
-    max-width: 1200px; /* Max width */
-    margin: 0 auto; /* Centering */
-    /* padding: 0 20px; Removed, as .container already has it */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -471,7 +434,7 @@ body.dark-mode .burger div {
 
 .subtitle {
     font-size: 20px;
-    color: var(--text-light);
+    /* color: var(--text-light); */ /* Base color handled by dark mode */
     margin-bottom: 25px;
 }
 
@@ -485,7 +448,7 @@ body.dark-mode .burger div {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--white);
+    /* background: var(--white); */ /* Base color handled by dark mode */
     border-radius: 50%;
     margin-right: 15px;
     color: var(--primary-color);
@@ -493,7 +456,7 @@ body.dark-mode .burger div {
     transition: var(--transition);
 }
 
-body.dark-mode .social-icons a { /* Copied from above for completeness */
+body.dark-mode .social-icons a {
     background: #333333;
     color: #ffffff;
 }
@@ -516,7 +479,7 @@ body.dark-mode .social-icons a:hover {
 .hero-image img {
     max-width: 100%;
     border-radius: 20px;
-    box-shadow: var(--shadow); 
+    box-shadow: var(--shadow);
     animation: float 3s ease-in-out infinite;
     border: 5px solid white;
 }
@@ -534,13 +497,13 @@ body.dark-mode .social-icons a:hover {
     }
 }
 
-/* Projects Section */
-.projects {
-    padding: 80px 0;
-    background-color: var(--white); /* Default background */
+section { /* Generic section padding */
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
-.projects h2 {
+
+.projects h2, .experience h2, .education h2, .certificates h2, .contact h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 50px;
@@ -553,7 +516,6 @@ body.dark-mode .social-icons a:hover {
 }
 
 .project-card {
-    background: var(--white);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -574,11 +536,11 @@ body.dark-mode .social-icons a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease; /* Original was var(--transition) */
+    transition: transform 0.5s ease;
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1); /* Original was 1.05, then 1.1 in another spot */
+    transform: scale(1.1);
 }
 
 .project-info {
@@ -591,7 +553,6 @@ body.dark-mode .social-icons a:hover {
 }
 
 .project-info p {
-    color: var(--text-light);
     margin-bottom: 15px;
 }
 
@@ -599,7 +560,6 @@ body.dark-mode .social-icons a:hover {
     margin-top: 20px;
 }
 
-/* Empty Project Cards */
 .project-card.empty {
     border: 2px dashed #ddd;
     display: flex;
@@ -607,16 +567,15 @@ body.dark-mode .social-icons a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #f9f9f9;
-    min-height: 300px; /* Ensure consistent height with other cards */
+    min-height: 300px;
 }
 
-.project-card.empty .project-image { /* Different structure in original */
-    background-color: transparent; /* remove explicit bg */
+.project-card.empty .project-image {
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto; /* adjust from fixed height */
+    height: auto;
     margin-bottom: 15px;
 }
 
@@ -626,33 +585,14 @@ body.dark-mode .social-icons a:hover {
     opacity: 0.7;
 }
 
-/* Dark mode for empty project card icon */
 body.dark-mode .project-card.empty .project-image i {
-    color: #ffffff; /* Ensuring icon color contrasts in dark mode */
+    color: #ffffff;
     opacity: 0.7;
 }
 
 
 .project-card.empty h3 {
     color: var(--primary-color);
-}
-
-.project-card.empty p {
-    color: var(--text-light);
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-    /* min-height: 100vh; From original CSS, ensure it's intended */
-    /* position: relative; From original CSS */
-}
-
-.contact h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
 }
 
 .contact-content {
@@ -664,7 +604,7 @@ body.dark-mode .project-card.empty .project-image i {
     flex: 1;
 }
 
-.contact-info h3 { /* This was contact-info, ensure it's correct */
+.contact-info h3 {
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -676,7 +616,6 @@ body.dark-mode .project-card.empty .project-image i {
 .contact-links a {
     display: block;
     margin-bottom: 15px;
-    color: var(--text-color); /* Adapts with body.dark-mode */
     font-weight: 600;
 }
 
@@ -687,7 +626,6 @@ body.dark-mode .project-card.empty .project-image i {
 
 .contact-form {
     flex: 1;
-    background: var(--white);
     padding: 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
@@ -715,24 +653,10 @@ body.dark-mode .project-card.empty .project-image i {
     resize: none;
 }
 
-/* Footer */
 footer {
-    background: var(--dark-color);
     color: var(--white);
     text-align: center;
     padding: 20px 0;
-}
-
-/* Experience & Education Sections */
-.experience, .education {
-    padding: 80px 0;
-    background-color: var(--white); /* Default background */
-}
-
-.experience h2, .education h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
 }
 
 .timeline {
@@ -769,7 +693,6 @@ footer {
 
 .timeline-content {
     padding: 20px;
-    background: var(--white);
     border-radius: 10px;
     box-shadow: var(--shadow);
     position: relative;
@@ -782,7 +705,6 @@ footer {
 }
 
 .timeline-content h4 {
-    color: var(--text-light);
     font-size: 16px;
     margin: 5px 0 15px;
 }
@@ -792,72 +714,56 @@ footer {
     top: 20px;
     font-weight: bold;
     color: var(--primary-color);
-    background: var(--white);
     padding: 5px 10px;
     border-radius: 20px;
     box-shadow: var(--shadow);
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
-    right: -130px; /* This might need adjustment based on content width */
+    right: -130px;
 }
 
 .timeline-item:nth-child(even) .timeline-date {
-    left: -120px; /* This might need adjustment */
+    left: -120px;
 }
 
 
-.timeline-item::after { /* The dot on the timeline */
+.timeline-item::after {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: var(--white); /* Dot fill */
-    border: 3px solid var(--primary-color); /* Dot border */
+    border: 3px solid var(--primary-color);
     border-radius: 50%;
-    top: 30px; /* Align with content */
-    z-index: 1; /* Above the timeline bar */
+    top: 30px;
+    z-index: 1;
 }
 
 
 .timeline-item:nth-child(odd)::after {
-    right: -10px; /* Centered on the timeline bar */
+    right: -10px;
 }
 
 .timeline-item:nth-child(even)::after {
-    left: -10px; /* Centered on the timeline bar */
+    left: -10px;
 }
 
 
-/* Typing Animation Styles */
-#animated-name { /* In React, this will be a span inside Hero.jsx */
+#animated-name {
     display: inline-block;
     position: relative;
-    min-height: 1em; /* Prevents layout shift */
+    min-height: 1em;
   }
-  
-/* Blinking cursor for typing animation */
+
 .blinking-cursor {
-    display: inline-block; /* Or 'inline' if preferred */
+    display: inline-block;
     animation: blink 0.7s infinite;
-    margin-left: 2px; /* Small space after text */
+    margin-left: 2px;
 }
-  
+
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
-}
-
-/* Certificates Section */
-.certificates {
-    padding: 80px 0;
-    background-color: #f9f9f9; /* Default background */
-}
-
-.certificates h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
 }
 
 .certificates-grid {
@@ -867,11 +773,10 @@ footer {
 }
 
 .certificate-card {
-    background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow); /* Original was 0 5px 15px rgba(0,0,0,0.1) */
-    transition: var(--transition); /* Original was all 0.3s ease */
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
 .certificate-card:hover {
@@ -904,7 +809,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Empty Certificate Cards */
 .certificate-card.empty {
     display: flex;
     flex-direction: column;
@@ -913,11 +817,10 @@ footer {
     text-align: center;
     padding: 30px;
     border: 2px dashed #ddd;
-    background-color: #f5f5f5;
-    min-height: 300px; /* From original */
+    min-height: 300px;
 }
 
-.certificate-icon { /* Used in empty certificate cards */
+.certificate-icon {
     font-size: 50px;
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -925,79 +828,74 @@ footer {
 }
 
 body.dark-mode .certificate-card.empty .certificate-icon {
-    color: #ffffff; /* Ensuring icon color contrasts in dark mode */
+    color: #ffffff;
 }
 
-
-/* Hero Buttons Container */
 .hero-buttons {
     display: flex;
     gap: 15px;
     margin-top: 25px;
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
-/* CV Button Style */
 .btn-cv {
-    background: var(--dark-color);
-    color: white;
-    border: 2px solid var(--dark-color); /* Ensure this is intended over var(--primary-color) */
+    /* background: var(--dark-color); */ /* Base color handled by dark mode */
+    /* color: white; */
+    border: 2px solid var(--dark-color);
 }
 
 .btn-cv:hover {
     background: transparent;
-    color: var(--dark-color); /* Text color on hover */
+    /* color: var(--dark-color); */ /* Base color handled by dark mode */
 }
 
 body.dark-mode .btn-cv {
-    background: #555; /* Dark mode CV button background */
-    border-color: #777; /* Dark mode CV button border */
+    background: #555;
+    border-color: #777;
     color: #fff;
 }
 
 body.dark-mode .btn-cv:hover {
     background: transparent;
-    color: #eee; /* Dark mode CV button text on hover */
+    color: #eee;
     border-color: #eee;
 }
 
 
-.btn-cv { /* Original had this separate, merged for clarity */
+.btn-cv {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease; /* Ensure this is var(--transition) or specific */
+    transition: all 0.3s ease;
 }
 
 .btn-cv:hover {
-    transform: translateY(-3px); /* Already defined in .btn:hover, confirm if this overrides */
+    transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-
-/* Active nav link styles */
 .nav-links a.active {
     position: relative;
-    color: var(--primary-color) !important; /* Ensure this takes precedence */
+    /* color: var(--primary-color) !important; */ /* Base color handled by dark mode */
 }
 
 body.dark-mode .nav-links a.active {
-    color: #fff !important; /* Example: White for active link in dark mode */
+    color: #fff !important; /* Ensure active link is white in dark mode */
 }
 
 
 .nav-links a.active::after {
     content: '';
     position: absolute;
-    width: 80%; /* Or 100% if preferred */
-    height: 3px; /* Or 2px to match non-active hover */
-    background: var(--primary-color); /* Will be overridden by dark-mode specific if active */
+    width: 80%;
+    height: 3px;
+    /* background: var(--primary-color); */ /* Base color handled by dark mode */
     bottom: -5px;
-    left: 10%; /* Center the underline */
+    left: 10%;
     border-radius: 3px;
-    animation: fadeIn 0.3s ease; /* From original */
+    animation: fadeIn 0.3s ease;
 }
 
 body.dark-mode .nav-links a.active::after {
-     background: #ffffff; /* From original dark mode styles */
+     background: #ffffff;
 }
 
 
@@ -1006,51 +904,39 @@ body.dark-mode .nav-links a.active::after {
     to { opacity: 1; transform: scaleX(1); }
 }
 
-/* Soon/placeholder items for timeline */
 .timeline-item.soon .timeline-content {
-    background: rgba(108, 99, 255, 0.05); /* Light purple tint */
-    border: 2px solid var(--primary-color); /* Changed from dashed to solid */
+    border: 2px solid var(--primary-color);
 }
 
 body.dark-mode .timeline-item.soon .timeline-content {
-    background: rgba(108, 99, 255, 0.1); /* Slightly more opaque for dark mode */
-    border-color: var(--primary-color); /* Ensure consistent border color in dark mode */
-    color: #bbb; /* Lighter text for "soon" items in dark mode */
+    background: rgba(108, 99, 255, 0.1); /* Keep a subtle distinction for "soon" items if desired */
+    border-color: var(--primary-color);
+    color: #bbb;
 }
 
 body.dark-mode .timeline-item.soon .timeline-content h3,
 body.dark-mode .timeline-item.soon .timeline-content h4 {
-    color: #ddd; /* Ensuring titles in "soon" items are clearly visible in dark mode */
-}
-
-
-.timeline-item.soon h3,
-.timeline-item.soon h4 {
-    color: var(--text-light); /* Muted text for "soon" items */
+    color: #ddd;
 }
 
 .timeline-item.soon .timeline-date {
     color: var(--primary-color);
-    /* font-style: italic; Removed */
 }
 
 body.dark-mode .timeline-item.soon .timeline-date {
-    color: var(--secondary-color); /* Or a lighter variant of primary for dark mode */
+    color: var(--primary-color); 
 }
 
-
-/* Student highlight for timeline / Current role highlight */
 .timeline-item.current-role .timeline-content {
-    background: rgba(230, 230, 255, 0.9); /* Lighter purple, distinct from regular items */
     box-shadow: 0 5px 20px rgba(108, 99, 255, 0.15);
-    /* border-color: var(--secondary-color); Removed to use base --primary-color */
+    border: 2px solid var(--primary-color);
 }
 
 body.dark-mode .timeline-item.current-role .timeline-content {
-    background: rgba(70, 70, 100, 0.9); /* Darker, distinct background for current role in dark mode */
     box-shadow: 0 5px 20px rgba(108, 99, 255, 0.25);
-    /* border-color: var(--primary-color); This is inherited now */
     color: #fff;
+    border: 2px solid var(--primary-color);
+    /* background remains as per .experience .timeline-item .timeline-content */
 }
 
 body.dark-mode .timeline-item.current-role .timeline-content h3,
@@ -1058,24 +944,22 @@ body.dark-mode .timeline-item.current-role .timeline-content h4 {
     color: #fff;
 }
 
-
-/* Responsive Styles */
 @media (max-width: 992px) {
-    .hero .container { /* This rule was in original CSS */
+    .hero .container {
         flex-direction: column;
-        text-align: center; /* Center content if hero content is also centered */
+        text-align: center;
     }
-    
+
     .hero-content {
         padding-right: 0;
         margin-bottom: 50px;
-        text-align: center; /* Ensure hero text content is centered */
+        text-align: center;
     }
-    
-    .social-icons { /* Ensure social icons are centered */
+
+    .social-icons {
         justify-content: center;
     }
-    
+
     .contact-content {
         flex-direction: column;
     }
@@ -1083,102 +967,94 @@ body.dark-mode .timeline-item.current-role .timeline-content h4 {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Initially hidden for mobile */
+        display: none;
         position: absolute;
         right: 0;
-        top: 80px; /* Adjust based on header height */
-        background: var(--white);
+        top: 80px; /* Match header height */
+        /* background: var(--white); */ /* Base color handled by dark mode */
         width: 100%;
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
         box-shadow: var(--shadow);
-        /* transform: translateY(-150%);  Removed, use display none/flex */
-        /* transition: var(--transition); */ /* Transition display is not smooth */
-        z-index: 999; /* Below header but above content */
+        z-index: 999;
     }
 
     body.dark-mode .nav-links {
-        background: #1e1e1e; /* Dark mode mobile menu background */
+        background: #1e1e1e; /* Match header bg */
     }
-    
-    .nav-links.active { /* This class will be toggled by JS */
+
+    .nav-links.active {
         display: flex;
     }
-    
+
     .nav-links li {
-        margin: 15px 0; /* Spacing for mobile menu items */
+        margin: 15px 0;
     }
-    
+
     .burger {
-        display: block; /* Show burger icon on mobile */
+        display: block;
     }
-    
+
     .hero-content h1 {
         font-size: 36px;
     }
-    
+
     .projects-grid {
-        grid-template-columns: 1fr; /* Single column for projects */
+        grid-template-columns: 1fr;
     }
 
-    /* Responsive Timeline from original */
     .timeline::before {
         left: 40px;
     }
-    
+
     .timeline-item {
         width: 100%;
-        padding-left: 70px; /* Space for date and dot */
+        padding-left: 70px;
         padding-right: 0;
     }
-    
-    .timeline-item:nth-child(even) { /* Stack all items on one side */
+
+    .timeline-item:nth-child(even) {
         left: 0;
     }
-    
+
     .timeline-item:nth-child(odd) .timeline-date,
     .timeline-item:nth-child(even) .timeline-date {
-        left: -30px; /* Position date to the left of content, adjust as needed */
+        left: -30px;
         right: auto;
-        top: 20px; /* Align with content */
-        /* transform: translateX(-100%); */ /* Push it to the left of the line */
+        top: 20px;
         text-align: right;
-        width: auto; /* Let it size based on content */
-        background: var(--white); /* Ensure background for readability */
+        width: auto;
         padding: 5px 8px;
     }
 
     body.dark-mode .timeline-item:nth-child(odd) .timeline-date,
     body.dark-mode .timeline-item:nth-child(even) .timeline-date {
-        background: #444444; /* Dark mode date background */
+        background: #444444;
         color: #ffffff;
     }
 
-    
-    .timeline-item::after { /* Dot position for mobile */
-        left: 30px; /* Align dot with the shifted timeline bar */
-    }
-    
-    .timeline-item:nth-child(even)::after { /* Ensure even items also align their dot */
+    .timeline-item::after {
         left: 30px;
     }
 
-    /* Certificates responsive */
+    .timeline-item:nth-child(even)::after {
+        left: 30px;
+    }
+
     .certificates-grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr;
     }
 }
 
-
-/* Mobile Responsiveness for hero buttons */
 @media (max-width: 576px) {
     .hero-buttons {
-        flex-direction: column; /* Stack buttons vertically */
+        flex-direction: column;
     }
-    
+
     .hero-buttons .btn {
-        width: 100%; /* Make buttons full width */
+        width: 100%;
         text-align: center;
     }
 }
+

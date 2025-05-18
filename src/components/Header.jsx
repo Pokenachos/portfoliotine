@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Header = ({ activeSection, onToggleDarkMode, isDarkMode }) => {
+const Header = ({ activeSection }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -52,11 +52,6 @@ const Header = ({ activeSection, onToggleDarkMode, isDarkMode }) => {
                 </a>
               </li>
             ))}
-             <li>
-                <button onClick={onToggleDarkMode} className="btn" style={{marginLeft: '20px', padding: '8px 15px', fontSize: '14px'}}>
-                    {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-                </button>
-            </li>
           </ul>
           <div className={`burger ${isNavOpen ? 'toggle' : ''}`} onClick={toggleNav}>
             <div className="line1"></div>

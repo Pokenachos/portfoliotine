@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 import './index.css'; // Using index.css for global styles
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   const sectionRefs = {
@@ -22,17 +21,10 @@ function App() {
     contact: useRef(null),
   };
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(prevMode => !prevMode);
-  };
-
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [isDarkMode]);
+    // Force dark mode permanently
+    document.body.classList.add('dark-mode');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +59,7 @@ function App() {
 
   return (
     <>
-      <Header activeSection={activeSection} onToggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+      <Header activeSection={activeSection} />
       <main>
         <div ref={sectionRefs.home}><Hero /></div>
         <div ref={sectionRefs.projects}><Projects /></div>
