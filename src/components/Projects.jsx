@@ -5,7 +5,7 @@ const projectsData = [
     id: 1,
     title: 'Project 1',
     description: 'This Project is for Admin Management.',
-    imageUrl: '/Images/Project1.png', // Correct path for public/Images/Project1.png
+    imageUrl: 'https://i.imghippo.com/files/oOKJ2926bs.png', // Updated image URL
     imageHint: 'admin dashboard',
     liveDemoUrl: 'https://tvskingstargoldadmin.pages.dev/login',
   },
