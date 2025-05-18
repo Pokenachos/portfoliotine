@@ -1,0 +1,1184 @@
+/* Global Styles */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #4d44db;
+    --dark-color: #2f2e41;
+    --light-color: #f8f9fa;
+    --text-color: #333;
+    --text-light: #777;
+    --white: #fff;
+    --black: #000;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+/* body.dark-mode .container { */
+    /* This rule might be too broad or conflict, let's be more specific or handle component-wise */
+    /* background-color: #1e1e1e; */
+/* } */
+
+body.dark-mode .btn {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #444444;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a.active::after {
+    background: #ffffff;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-content p,
+body.dark-mode .hero-content .subtitle {
+    color: #ffffff;
+}
+
+body.dark-mode .social-icons a {
+    background: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .social-icons a:hover {
+    background: #444444;
+}
+
+body.dark-mode .project-card {
+    background: #1e1e1e;
+    /* color: #ffffff; */ /* Handled by text color on body.dark-mode */
+}
+
+body.dark-mode .project-card .project-info h3,
+body.dark-mode .project-card .project-info p {
+    color: #ffffff;
+}
+
+body.dark-mode .project-card.empty {
+    background-color: #333333;
+    border-color: #444444;
+}
+
+body.dark-mode .project-card.empty h3,
+body.dark-mode .project-card.empty p {
+    color: #ffffff;
+}
+
+body.dark-mode .contact {
+    background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+}
+
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-info p,
+body.dark-mode .contact-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-form {
+    background: #1e1e1e;
+    /* color: #ffffff; */
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: #333333;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+    border-color: #ffffff;
+}
+
+body.dark-mode footer {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode .certificates {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .certificate-card {
+    background: #333333;
+    /* color: #ffffff; */
+}
+
+body.dark-mode .certificate-card.empty {
+    background-color: #444444;
+    border-color: #555555;
+}
+
+body.dark-mode .certificate-card.empty h3,
+body.dark-mode .certificate-card.empty p {
+    color: #ffffff;
+}
+
+body.dark-mode .timeline-content {
+    background: #333333;
+    /* color: #ffffff; */
+}
+
+body.dark-mode .timeline-date {
+    background: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode .education {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .education h2 {
+    color: #ffffff;
+}
+
+/* body.dark-mode .timeline { */
+    /* background-color: #1e1e1e; */ /* Timeline itself doesn't need background, its items do */
+/* } */
+
+body.dark-mode .timeline::before {
+    background-color: #ffffff;
+}
+
+body.dark-mode .timeline-item .timeline-content { /* More specific */
+    background-color: #333333;
+    color: #ffffff; /* Ensure text color is white */
+}
+
+
+body.dark-mode .timeline-item .timeline-date { /* More specific */
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode .timeline-item::after {
+    background-color: #1e1e1e; /* Dot background */
+    border-color: #ffffff; /* Dot border */
+}
+
+
+/* Dark mode styles for Work Experience section */
+body.dark-mode .experience {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .experience h2 {
+    color: #ffffff;
+}
+
+/* body.dark-mode .experience .timeline {
+    background-color: #1e1e1e;
+} */
+
+body.dark-mode .experience .timeline::before {
+    background-color: #ffffff;
+}
+
+/* body.dark-mode .experience .timeline-item {
+    background-color: #333333;
+    color: #ffffff;
+} */
+
+body.dark-mode .experience .timeline-item .timeline-content {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .experience .timeline-item .timeline-date {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode .experience .timeline-item::after {
+    background-color: #1e1e1e;
+    border-color: #ffffff;
+}
+
+/* Dark mode styles for My Projects section */
+body.dark-mode .projects {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .projects h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .projects .project-card {
+    background-color: #333333;
+    /* color: #ffffff; */
+}
+
+body.dark-mode .projects .project-card .project-info h3,
+body.dark-mode .projects .project-card .project-info p {
+    color: #ffffff;
+}
+
+body.dark-mode .projects .project-card.empty {
+    background-color: #444444;
+    border-color: #555555;
+}
+
+body.dark-mode .projects .project-card.empty h3,
+body.dark-mode .projects .project-card.empty p {
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-small {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-right: 10px;
+}
+
+.btn-small:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-bar-container {
+    width: 100%;
+    height: 5px; /* Adjust height as needed */
+    position: fixed; /* Changed from relative to fixed to be at the very top */
+    top: 0;
+    left: 0;
+    z-index: 1001; /* Higher than header content but below modals if any */
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #6c63ff, #45aaf2); /* Purple to Blue gradient */
+    width: 0%; /* Initial width */
+    transition: width 0.1s ease-out; /* Smooth transition for width change */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0; /* Matches original CSS */
+    height: 80px; /* Ensure consistent height, can be adjusted */
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center; /* Vertically align items if needed */
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--text-color); /* Will be overridden by dark-mode specific if active */
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: -5px;
+    left: 0;
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Burger menu specific styles, adapted from original */
+.burger {
+    display: none; /* Hidden by default, shown in media query */
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color); /* Adapts to dark mode via body color */
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .burger div {
+    background-color: #ffffff; /* Explicit for dark mode */
+}
+
+
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Hero Section */
+.hero {
+    padding-top: 100px; /* Adjust top padding: header (80px) + progress bar (5px) + some breathing room */
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh; /* Make hero take full viewport height */
+    display: flex; /* For centering content */
+    align-items: center; /* For centering content */
+}
+
+.hero .container { /* Added from original structure for consistency with other sections */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; /* Ensure container takes up appropriate width */
+    max-width: 1200px; /* Max width */
+    margin: 0 auto; /* Centering */
+    /* padding: 0 20px; Removed, as .container already has it */
+}
+
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    margin: 25px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+    color: var(--primary-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+body.dark-mode .social-icons a { /* Copied from above for completeness */
+    background: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .social-icons a:hover {
+    background: #444444;
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow); 
+    animation: float 3s ease-in-out infinite;
+    border: 5px solid white;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    background-color: var(--white); /* Default background */
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Original was var(--transition) */
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1); /* Original was 1.05, then 1.1 in another spot */
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+/* Empty Project Cards */
+.project-card.empty {
+    border: 2px dashed #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 300px; /* Ensure consistent height with other cards */
+}
+
+.project-card.empty .project-image { /* Different structure in original */
+    background-color: transparent; /* remove explicit bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* adjust from fixed height */
+    margin-bottom: 15px;
+}
+
+.project-card.empty .project-image i {
+    font-size: 50px;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+/* Dark mode for empty project card icon */
+body.dark-mode .project-card.empty .project-image i {
+    color: #ffffff; /* Ensuring icon color contrasts in dark mode */
+    opacity: 0.7;
+}
+
+
+.project-card.empty h3 {
+    color: var(--primary-color);
+}
+
+.project-card.empty p {
+    color: var(--text-light);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    /* min-height: 100vh; From original CSS, ensure it's intended */
+    /* position: relative; From original CSS */
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 { /* This was contact-info, ensure it's correct */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    margin: 30px 0;
+}
+
+.contact-links a {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--text-color); /* Adapts with body.dark-mode */
+    font-weight: 600;
+}
+
+.contact-links a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.contact-form {
+    flex: 1;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Experience & Education Sections */
+.experience, .education {
+    padding: 80px 0;
+    background-color: var(--white); /* Default background */
+}
+
+.experience h2, .education h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative;
+    border: 2px solid var(--primary-color);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.timeline-content h4 {
+    color: var(--text-light);
+    font-size: 16px;
+    margin: 5px 0 15px;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+    background: var(--white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -130px; /* This might need adjustment based on content width */
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -120px; /* This might need adjustment */
+}
+
+
+.timeline-item::after { /* The dot on the timeline */
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white); /* Dot fill */
+    border: 3px solid var(--primary-color); /* Dot border */
+    border-radius: 50%;
+    top: 30px; /* Align with content */
+    z-index: 1; /* Above the timeline bar */
+}
+
+
+.timeline-item:nth-child(odd)::after {
+    right: -10px; /* Centered on the timeline bar */
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px; /* Centered on the timeline bar */
+}
+
+
+/* Typing Animation Styles */
+#animated-name { /* In React, this will be a span inside Hero.jsx */
+    display: inline-block;
+    position: relative;
+    min-height: 1em; /* Prevents layout shift */
+  }
+  
+/* Blinking cursor for typing animation */
+.blinking-cursor {
+    display: inline-block; /* Or 'inline' if preferred */
+    animation: blink 0.7s infinite;
+    margin-left: 2px; /* Small space after text */
+}
+  
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 80px 0;
+    background-color: #f9f9f9; /* Default background */
+}
+
+.certificates h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow); /* Original was 0 5px 15px rgba(0,0,0,0.1) */
+    transition: var(--transition); /* Original was all 0.3s ease */
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.certificate-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.05);
+}
+
+.certificate-info {
+    padding: 20px;
+}
+
+.certificate-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Empty Certificate Cards */
+.certificate-card.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    border: 2px dashed #ddd;
+    background-color: #f5f5f5;
+    min-height: 300px; /* From original */
+}
+
+.certificate-icon { /* Used in empty certificate cards */
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+body.dark-mode .certificate-card.empty .certificate-icon {
+    color: #ffffff; /* Ensuring icon color contrasts in dark mode */
+}
+
+
+/* Hero Buttons Container */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* CV Button Style */
+.btn-cv {
+    background: var(--dark-color);
+    color: white;
+    border: 2px solid var(--dark-color); /* Ensure this is intended over var(--primary-color) */
+}
+
+.btn-cv:hover {
+    background: transparent;
+    color: var(--dark-color); /* Text color on hover */
+}
+
+body.dark-mode .btn-cv {
+    background: #555; /* Dark mode CV button background */
+    border-color: #777; /* Dark mode CV button border */
+    color: #fff;
+}
+
+body.dark-mode .btn-cv:hover {
+    background: transparent;
+    color: #eee; /* Dark mode CV button text on hover */
+    border-color: #eee;
+}
+
+
+.btn-cv { /* Original had this separate, merged for clarity */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease; /* Ensure this is var(--transition) or specific */
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px); /* Already defined in .btn:hover, confirm if this overrides */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+
+/* Active nav link styles */
+.nav-links a.active {
+    position: relative;
+    color: var(--primary-color) !important; /* Ensure this takes precedence */
+}
+
+body.dark-mode .nav-links a.active {
+    color: #fff !important; /* Example: White for active link in dark mode */
+}
+
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    width: 80%; /* Or 100% if preferred */
+    height: 3px; /* Or 2px to match non-active hover */
+    background: var(--primary-color); /* Will be overridden by dark-mode specific if active */
+    bottom: -5px;
+    left: 10%; /* Center the underline */
+    border-radius: 3px;
+    animation: fadeIn 0.3s ease; /* From original */
+}
+
+body.dark-mode .nav-links a.active::after {
+     background: #ffffff; /* From original dark mode styles */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+/* Soon/placeholder items for timeline */
+.timeline-item.soon .timeline-content {
+    background: rgba(108, 99, 255, 0.05); /* Light purple tint */
+    border: 2px solid var(--primary-color); /* Changed from dashed to solid */
+}
+
+body.dark-mode .timeline-item.soon .timeline-content {
+    background: rgba(108, 99, 255, 0.1); /* Slightly more opaque for dark mode */
+    border-color: var(--primary-color); /* Ensure consistent border color in dark mode */
+    color: #bbb; /* Lighter text for "soon" items in dark mode */
+}
+
+body.dark-mode .timeline-item.soon .timeline-content h3,
+body.dark-mode .timeline-item.soon .timeline-content h4 {
+    color: #ddd; /* Ensuring titles in "soon" items are clearly visible in dark mode */
+}
+
+
+.timeline-item.soon h3,
+.timeline-item.soon h4 {
+    color: var(--text-light); /* Muted text for "soon" items */
+}
+
+.timeline-item.soon .timeline-date {
+    color: var(--primary-color);
+    /* font-style: italic; Removed */
+}
+
+body.dark-mode .timeline-item.soon .timeline-date {
+    color: var(--secondary-color); /* Or a lighter variant of primary for dark mode */
+}
+
+
+/* Student highlight for timeline / Current role highlight */
+.timeline-item.current-role .timeline-content {
+    background: rgba(230, 230, 255, 0.9); /* Lighter purple, distinct from regular items */
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.15);
+    /* border-color: var(--secondary-color); Removed to use base --primary-color */
+}
+
+body.dark-mode .timeline-item.current-role .timeline-content {
+    background: rgba(70, 70, 100, 0.9); /* Darker, distinct background for current role in dark mode */
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.25);
+    /* border-color: var(--primary-color); This is inherited now */
+    color: #fff;
+}
+
+body.dark-mode .timeline-item.current-role .timeline-content h3,
+body.dark-mode .timeline-item.current-role .timeline-content h4 {
+    color: #fff;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero .container { /* This rule was in original CSS */
+        flex-direction: column;
+        text-align: center; /* Center content if hero content is also centered */
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center; /* Ensure hero text content is centered */
+    }
+    
+    .social-icons { /* Ensure social icons are centered */
+        justify-content: center;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Initially hidden for mobile */
+        position: absolute;
+        right: 0;
+        top: 80px; /* Adjust based on header height */
+        background: var(--white);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: var(--shadow);
+        /* transform: translateY(-150%);  Removed, use display none/flex */
+        /* transition: var(--transition); */ /* Transition display is not smooth */
+        z-index: 999; /* Below header but above content */
+    }
+
+    body.dark-mode .nav-links {
+        background: #1e1e1e; /* Dark mode mobile menu background */
+    }
+    
+    .nav-links.active { /* This class will be toggled by JS */
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 15px 0; /* Spacing for mobile menu items */
+    }
+    
+    .burger {
+        display: block; /* Show burger icon on mobile */
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column for projects */
+    }
+
+    /* Responsive Timeline from original */
+    .timeline::before {
+        left: 40px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px; /* Space for date and dot */
+        padding-right: 0;
+    }
+    
+    .timeline-item:nth-child(even) { /* Stack all items on one side */
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        left: -30px; /* Position date to the left of content, adjust as needed */
+        right: auto;
+        top: 20px; /* Align with content */
+        /* transform: translateX(-100%); */ /* Push it to the left of the line */
+        text-align: right;
+        width: auto; /* Let it size based on content */
+        background: var(--white); /* Ensure background for readability */
+        padding: 5px 8px;
+    }
+
+    body.dark-mode .timeline-item:nth-child(odd) .timeline-date,
+    body.dark-mode .timeline-item:nth-child(even) .timeline-date {
+        background: #444444; /* Dark mode date background */
+        color: #ffffff;
+    }
+
+    
+    .timeline-item::after { /* Dot position for mobile */
+        left: 30px; /* Align dot with the shifted timeline bar */
+    }
+    
+    .timeline-item:nth-child(even)::after { /* Ensure even items also align their dot */
+        left: 30px;
+    }
+
+    /* Certificates responsive */
+    .certificates-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
+
+
+/* Mobile Responsiveness for hero buttons */
+@media (max-width: 576px) {
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+    
+    .hero-buttons .btn {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+    }
+}
