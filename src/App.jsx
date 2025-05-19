@@ -7,7 +7,8 @@ import Education from './components/Education';
 import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './index.css'; // Using index.css for global styles
+import AnimatedStarryBackground from './components/AnimatedStarryBackground'; // Import the new component
+import './index.css'; 
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -28,15 +29,14 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2; // Adjust offset as needed
+      const scrollPosition = window.scrollY + window.innerHeight / 2; 
 
-      // Special handling for contact section at the very bottom
-      if ( (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100 ) { // 100px buffer
+      if ( (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100 ) { 
          setActiveSection('contact');
          return;
       }
 
-      let currentSection = 'home'; // Default to home
+      let currentSection = 'home'; 
       for (const sectionId in sectionRefs) {
         const ref = sectionRefs[sectionId].current;
         if (ref) {
@@ -52,21 +52,54 @@ function App() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll(); 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [sectionRefs]);
+  }, []); 
 
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-animated');
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null, 
+      rootMargin: '0px',
+      threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const refsArray = Object.values(sectionRefs);
+    refsArray.forEach(sectionRef => {
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+    });
+
+    return () => {
+      refsArray.forEach(sectionRef => {
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
+      });
+    };
+  }, []);
 
   return (
     <>
+      <AnimatedStarryBackground /> {/* Add the animated background here */}
       <Header activeSection={activeSection} />
       <main>
-        <div ref={sectionRefs.home}><Hero /></div>
-        <div ref={sectionRefs.projects}><Projects /></div>
-        <div ref={sectionRefs.experience}><Experience /></div>
-        <div ref={sectionRefs.education}><Education /></div>
-        <div ref={sectionRefs.certificates}><Certificates /></div>
-        <div ref={sectionRefs.contact}><Contact /></div>
+        <div ref={sectionRefs.home} className="section-animate"><Hero /></div>
+        <div ref={sectionRefs.projects} className="section-animate"><Projects /></div>
+        <div ref={sectionRefs.experience} className="section-animate"><Experience /></div>
+        <div ref={sectionRefs.education} className="section-animate"><Education /></div>
+        <div ref={sectionRefs.certificates} className="section-animate"><Certificates /></div>
+        <div ref={sectionRefs.contact} className="section-animate"><Contact /></div>
       </main>
       <Footer />
     </>
