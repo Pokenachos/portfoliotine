@@ -83,7 +83,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img src="https://i.imghippo.com/files/Vtg4134UxA.jpg" alt="Profile Image" data-ai-hint="profile photo" />
+          <img src="https://i.imgur.com/IqwdsAP.jpeg" alt="Profile Image" data-ai-hint="profile photo" />
         </div>
       </div>
     </section>
