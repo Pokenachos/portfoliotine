@@ -200,8 +200,8 @@ body.dark-mode #contact { background: #373737; }
 body.dark-mode footer {
     background: #1a1a1a; /* Match hero background */
     color: #ffffff;
-    position: relative; 
-    z-index: 2;       
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -222,15 +222,21 @@ body.dark-mode .social-icons a:hover {
 
 body.dark-mode .project-card {
     background: #1e1e1e; /* Darker than section, for contrast */
+    display: flex;
+    flex-direction: column;
 }
 
-body.dark-mode .project-card .project-info h3,
-body.dark-mode .project-card .project-info p {
+body.dark-mode .project-card .project-info h3 {
     color: #ffffff;
 }
+body.dark-mode .project-card .project-info p {
+    color: #ffffff;
+    flex-grow: 1; /* Allows paragraph to take up available space, pushing link to bottom */
+}
+
 
 body.dark-mode .project-card.empty {
-    background-color: #222; 
+    background-color: #222;
     border-color: #444444;
 }
 
@@ -246,7 +252,7 @@ body.dark-mode .contact-links a {
 }
 
 body.dark-mode .contact-form {
-    background: #2c2c2c; 
+    background: #2c2c2c;
 }
 
 body.dark-mode .contact-form input,
@@ -262,7 +268,7 @@ body.dark-mode .contact-form textarea:focus {
 }
 
 body.dark-mode .certificate-card {
-    background: #2e2e2e; 
+    background: #2e2e2e;
 }
 
 body.dark-mode .certificate-card.empty {
@@ -326,12 +332,6 @@ body.dark-mode #experience .timeline-item::after {
 
 
 body.dark-mode #projects h2 {
-    color: #ffffff;
-}
-
-
-body.dark-mode #projects .project-card .project-info h3,
-body.dark-mode #projects .project-card .project-info p {
     color: #ffffff;
 }
 
@@ -417,7 +417,7 @@ header {
 
 .scroll-progress-bar-container {
     width: 100%;
-    height: 5px; 
+    height: 5px;
 }
 
 .scroll-progress-bar {
@@ -433,7 +433,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0; /* Adjusted padding */
-    height: 60px; 
+    height: 60px;
 }
 
 
@@ -503,14 +503,14 @@ body.dark-mode .burger div {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.hero { 
+.hero {
     padding-top: 80px; /* Adjusted to account for header + progress bar */
     padding-bottom: 80px;
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .hero .container {
@@ -588,10 +588,10 @@ body.dark-mode .burger div {
 }
 
 section {
-    padding-top: 80px; 
+    padding-top: 80px;
     padding-bottom: 80px;
-    position: relative; 
-    z-index: 2;       
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -612,6 +612,7 @@ section {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    /* display: flex; and flex-direction: column; are now in body.dark-mode .project-card */
 }
 
 .project-card:hover {
@@ -637,6 +638,9 @@ section {
 
 .project-info {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows project-info to take up remaining vertical space */
 }
 
 .project-info h3 {
@@ -646,6 +650,7 @@ section {
 
 .project-info p {
     margin-bottom: 15px;
+    /* flex-grow: 1; is now in body.dark-mode .project-card .project-info p */
 }
 
 .project-links {
@@ -659,15 +664,15 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 300px; 
+    min-height: 300px;
 }
 
 .project-card.empty .project-image {
-    background-color: transparent; 
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto; 
+    height: auto;
     margin-bottom: 15px;
 }
 
@@ -907,7 +912,7 @@ footer {
     text-align: center;
     padding: 30px;
     border: 2px dashed #ddd;
-    min-height: 300px; 
+    min-height: 300px;
 }
 
 .certificate-icon {
@@ -1039,7 +1044,7 @@ body.dark-mode .timeline-item.current-role .timeline-content {
         display: none;
         position: absolute;
         right: 0;
-        top: 65px; 
+        top: 65px;
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -1091,8 +1096,8 @@ body.dark-mode .timeline-item.current-role .timeline-content {
     .timeline-item:nth-child(even) .timeline-date {
         left: -40px; /* Adjusted to prevent overlap with circle */
         right: auto;
-        top: 20px; 
-        text-align: right; 
+        top: 20px;
+        text-align: right;
         width: auto;
         padding: 5px 8px;
     }
@@ -1121,3 +1126,4 @@ body.dark-mode .timeline-item.current-role .timeline-content {
     }
 }
 
+    

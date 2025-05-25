@@ -5,11 +5,18 @@ const projectsData = [
     id: 1,
     title: 'Project 1',
     description: 'This Project is for Admin Management.',
-    imageUrl: 'https://i.imgur.com/K6JEIsM.png', // Updated image URL
+    imageUrl: 'https://i.imgur.com/K6JEIsM.png',
     imageHint: 'admin dashboard',
     liveDemoUrl: 'https://tvskingstargoldadmin.pages.dev/login',
   },
-  // Project 2 is a placeholder
+  {
+    id: 2,
+    title: 'Project 2',
+    description: 'This Project is for Sales in Cogeo and Silang Branch.',
+    imageUrl: 'https://i.imgur.com/xMINo0w.png',
+    imageHint: 'sales app',
+    liveDemoUrl: 'https://tvskingstargold.pages.dev/', // Added live demo link
+  },
 ];
 
 const Projects = React.forwardRef((props, ref) => (
@@ -33,16 +40,7 @@ const Projects = React.forwardRef((props, ref) => (
             </div>
           </div>
         ))}
-        {/* Empty Project Cards for Future Projects - now 5 placeholders */}
-        <div className="project-card empty">
-          <div className="project-image">
-            <i className="fas fa-plus"></i>
-          </div>
-          <div className="project-info">
-            <h3>Coming Soon</h3>
-            <p>My next amazing project will be displayed here.</p>
-          </div>
-        </div>
+        {/* Empty Project Cards for Future Projects - now 4 placeholders */}
         <div className="project-card empty">
           <div className="project-image">
             <i className="fas fa-plus"></i>
